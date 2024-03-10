@@ -1,0 +1,44 @@
+@use "./partials/variables" as *;
+
+* {
+    box-sizing: border-box;
+}
+
+// Main Colors
+
+$BrainFlix-Black: #323232;
+$BrainFlix-Blue: #0095FF;
+$Silver: #AFAFAF;
+$White: #FFFFFF;
+
+// Secondary Colors
+
+$BrainFlix-DarkBlack: #000000;
+$BrainFlix-DarkBlue: #0065AD;
+$Mercury: #E1E1E1;
+$Alabaster: #FAFAFA;
+
+
+// Font Names
+
+$Bold-Font: 'Avenir Next LT Pro Bold';
+$Demi-Font: 'Avenir Next LT Pro Demi';
+$Regular-Font: 'Avenir Next LT Pro Regular';
+
+@font-face {
+    font-family: $Bold-Font;
+    src: url('./assets/fonts/AvenirNextLTPro-Bold.otf') format('opentype');
+    font-family: 'Avenir Bold', Arial, sans-serif;
+}
+
+@font-face {
+    font-family: $Demi-Font;
+    src: url('./assets/fonts/AvenirNextLTPro-Demi.otf') format('opentype');
+    font-family: 'Avenir Demi', Arial, sans-serif;
+}
+
+@font-face {
+    font-family: $Regular-Font;
+    src: url('./assets/fonts/AvenirNextLTPro-Regular.otf') format('opentype');
+    font-family: 'Avenir Regular', Arial, sans-serif;
+}
