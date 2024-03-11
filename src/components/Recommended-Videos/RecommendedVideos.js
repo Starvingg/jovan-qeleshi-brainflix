@@ -5,6 +5,7 @@ function RecommendedVideos({ nextVideo, onVideoSelect, selectedVideo }) {
 
     return (
         <>
+            <h4 className="headerText" >NEXT VIDEOS</h4>
             {filteredVideos.map(video => (
                 <div className="nextVideo" key={video.id} onClick={() => onVideoSelect(video)}>
                     <div className="nextVideo-img">

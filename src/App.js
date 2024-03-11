@@ -19,14 +19,18 @@ function App() {
       <NavBar />
       <VideoPlayer video={selectedVideo} />
       <div className='pageHandler'>
-        <VideoInfo video={selectedVideo} />
-        <div className='bodyDiv'>
 
+        
+        <div className='pageHandler-videoInfoComments'>
+        <VideoInfo video={selectedVideo} />
           <h4>{selectedVideo.comments.length} Comments</h4>
           <DisplayComments commentsData={selectedVideo} />
-          <h4>NEXT VIDEOS</h4>
+        </div>
+
+        <div className='pageHandler-nextVideo'>
           <RecommendedVideos nextVideo={videoData} onVideoSelect={setSelectedVideo} selectedVideo={selectedVideo} />
         </div>
+
 
       </div>
     </>
