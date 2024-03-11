@@ -5,7 +5,16 @@ import heartIcon from "../../assets/Icons/likes.svg"
 
 import "../../data/video-details.json"
 
-function VideoPlayer({video}) {
+function VideoPlayer({ video }) {
+
+    const timeStamp = video.timestamp;
+    const date = new Date(timeStamp);
+    const month = date.getMonth() + 1;
+    const day = date.getDate();
+    const year = date.getFullYear();
+    
+    const formattedDate = `${month}/${day}/${year}`;
+
 
     return (
         <>
@@ -22,7 +31,7 @@ function VideoPlayer({video}) {
 
                         <div className="videoComponent-infoContainer-details-author">
                             <h3>{video.channel}</h3>
-                            <p>{video.timestamp}</p>
+                            <p>{timeStamp}</p>
                         </div>
                         <div className="videoComponent-infoContainer-details-viewsLikes">
                             <div>

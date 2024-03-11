@@ -11,7 +11,7 @@ import videoData from "./data/video-details.json"
 
 function App() {
 
-  const [selectedVideo, setSelectedVideo] = useState(videoData[3]);
+  const [selectedVideo, setSelectedVideo] = useState(videoData[0]);
 
   return (
     <>
