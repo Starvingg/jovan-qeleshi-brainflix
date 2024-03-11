@@ -1,11 +1,12 @@
 import "./RecommendedVideos.scss"
 
-function RecommendedVideos({ nextVideo }) {
+function RecommendedVideos({ nextVideo, onVideoSelect, selectedVideo }) {
+    const filteredVideos = nextVideo.filter(video => video.id !== selectedVideo.id);
+
     return (
         <>
-            {nextVideo.map(video => (
-                <div className="nextVideo" >
-
+            {filteredVideos.map(video => (
+                <div className="nextVideo" key={video.id} onClick={() => onVideoSelect(video)}>
                     <div className="nextVideo-img">
                         <img src={video.image} alt={video.title} />
                     </div>

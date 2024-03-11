@@ -1,29 +1,35 @@
+import CreateComment from "../CreateComment/CreateComment";
 import "./DisplayComment.scss"
 
-function DisplayComments() {
+function DisplayComments({commentsData}) {
+
+    const comments = commentsData.comments;
+
     return (
         <>
-            <div className="comment">
-                
-                <div className="comment-image">
-                    <div>
+            <CreateComment />
+
+            {comments.map(comment => (
+                <div className="comment" key={comment.id}>
+                    <div className="comment-image">
                         <div>
+                            <div>
 
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <div className="comment-information">
-
-                    <div className="comment-information-nameDate">
-                        <h4>Noah Duncan</h4>
-                        <p>08/11/2023</p>
-                    </div>
+                    <div className="comment-information">
+                        <div className="comment-information-nameDate">
+                            <h4>{comment.name}</h4>
+                            <p>{comment.timestamp}</p>
+                        </div>
                         <div className="comment-information-commentInfo">
-                            <p>Your insights into the future of AI are enlightening! The intersection of technology and ethics is particularly thought-provoking. Keep us updated on the tech front!</p>
+                            <p>{comment.comment}</p>
                         </div>
+                    </div>
                 </div>
-            </div>
+            ))}
            
         </>
     );
