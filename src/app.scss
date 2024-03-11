@@ -1,4 +1,3 @@
-@use "./partials/variables" as *;
 
 * {
     box-sizing: border-box;
@@ -41,4 +40,30 @@ $Regular-Font: 'Avenir Next LT Pro Regular';
     font-family: $Regular-Font;
     src: url('./assets/fonts/AvenirNextLTPro-Regular.otf') format('opentype');
     font-family: 'Avenir Regular', Arial, sans-serif;
+}
+
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+h1 {
+    // Page Header 
+    font-family: $Bold-Font;
+}
+
+h2 {
+    // Section Header
+    font-family: $Bold-Font;
+}
+
+h3 {
+    // Subheader
+    font-family: $Demi-Font;
+}
+
+p {
+    // Body Copy and Footer Copy
+    font-family: $Regular-Font;
 }
