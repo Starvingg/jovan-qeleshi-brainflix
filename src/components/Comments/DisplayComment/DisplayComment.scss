@@ -1,0 +1,45 @@
+@use "../../../app.scss" as *;
+
+.comment{
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: top;
+    padding: 1rem 0rem;
+    // margin:  2rem;
+    gap: 1rem;
+    border-bottom: 1px solid $Mercury;
+
+    &-image{
+
+        div{
+            width: 2.5rem;
+            height: 2.5rem;
+            border-radius: 50%;
+            background-color: #AFAFAF;
+        }
+    }
+
+    &-information{
+        
+        &-nameDate {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+
+            h4{
+                margin: 0;
+                padding: 0;
+            }
+
+            p {
+                margin: 0;
+                padding: 0;
+            }
+
+        }
+        
+    }
+
+}

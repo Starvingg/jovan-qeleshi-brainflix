@@ -1,0 +1,102 @@
+@use "../../app.scss" as *;
+
+.videoComponent {
+
+    &-controller {
+        width: 100%;
+    }
+
+    &-infoContainer {
+        padding-left: 2rem;
+        padding-right: 2rem;
+
+        &-title {
+            border-bottom: 1px solid $Mercury;
+            @media (min-width: 768px) {
+                border: none;
+            }
+        }
+
+        &-details {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid $Mercury;
+            
+            &-author {
+                display: flex;
+                flex-direction: column;
+
+                @media (min-width: 768px) {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    h3{margin: 0 0rem;}
+                    p {margin: 0 1rem;}
+                }
+
+                h3 {
+                    padding: 1 rem;
+                    margin: 0 rem;
+                }
+
+                p {
+                    padding: 1 rem;
+                    margin: .5 rem;
+                }
+
+            }
+
+            &-viewsLikes {
+                display: flex;
+                flex-direction: row;
+
+                @media (min-width: 768px) {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    h3{margin: 0 1rem;}
+                    p {margin: 0 1rem;}
+                }
+
+                h3 {
+                    padding: 1 rem;
+                    margin: .5 rem;
+                }
+
+                p {
+                    padding: 1 rem;
+                    margin: .5 rem;
+                }
+
+                div {
+                    display: flex;
+                    flex-direction: column;
+                    margin-right: 0;
+                    padding-right: 1rem;
+
+                    @media (min-width: 768px) {
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        margin: 0 0rem;
+                        margin-right: 0;
+                    }
+
+                    div {
+                        display: flex;
+                        flex-direction: row;
+                        div {
+                            width: 5px;
+                            margin: 0;
+                        }
+                    }
+                }
+            }
+
+        }
+
+    }
+
+}
