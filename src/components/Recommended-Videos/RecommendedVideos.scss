@@ -1,0 +1,38 @@
+@use "../../app.scss" as *;
+
+.nextVideo {
+    display: flex;
+    flex-direction: row;
+    margin: 1.5rem 0rem;
+    
+    &-img {
+        
+        width: 10rem;
+        border-radius: 4px;
+        
+        img{
+            border-radius: 4px;
+            width: 100%;
+        }
+        
+    }
+    
+    &-text{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: .5rem 0;
+
+        h4 {
+            margin: 0;
+            padding: 0;
+        }
+
+        p {
+            margin: 0;
+            padding: 0;
+        }
+
+    }
+
+}
