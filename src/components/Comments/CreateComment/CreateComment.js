@@ -19,7 +19,9 @@ function CreateComment() {
                         </form>
                     </div>
                     <div className="createComment-commentBox-button">
-                        <button>COMMENT</button>
+                    <button>
+                            <img src={commentIcon} alt='Upload Button'/>
+                            COMMENT</button>
                     </div>
                 </div>
             </div>

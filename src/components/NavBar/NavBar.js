@@ -1,5 +1,7 @@
 import './NavBar.scss';
 import logo from '../../assets/images/BrainFlix-logo.svg'
+import uploadSVG from '../../assets/Icons/upload.svg'
+
 import profileImage from "../../assets/images/Mohan-muruge.jpg"
 
 function NavBar() {
@@ -22,7 +24,9 @@ function NavBar() {
                     </div>
 
                     <div className='headerParent-uploadButton'>
-                        <button>UPLOAD</button>
+                        <button>
+                            <img src={uploadSVG} alt='Upload Button'/>
+                            UPLOAD</button>
                     </div>
 
                 </div>
@@ -33,11 +37,13 @@ function NavBar() {
                     <div className='headerParentTablet-searchButtonImage'>
 
                         <form onSubmit={() => { }}>
-                            <input type='text' placeholder='Search' />
+                            <input type='text' placeholder='Search'></input>
                         </form>
 
                         <div className='headerParentTablet-searchButtonImage-button'>
-                            <button>UPLOAD</button>
+                        <button>
+                            <img src={uploadSVG} alt='Upload Button'/>
+                            UPLOAD</button>
                         </div>
 
                         <div className='headerParentTablet-searchButtonImage-image'>
