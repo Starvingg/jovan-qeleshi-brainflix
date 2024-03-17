@@ -11,27 +11,32 @@ a {
 
 h1 {
     // Page Header 
-    font-family: $Bold-Font;
+    font-family: $Bold-Font, Avenir, Helvetica, sans-serif;
+    font-weight: bold;
 }
 
 h2 {
     // Section Header
-    font-family: $Bold-Font;
+    font-family: $Bold-Font, Avenir, Helvetica, sans-serif;
+    font-weight: bold;
 }
 
 h3 {
     // Subheader
-    font-family: $Demi-Font;
+    font-family: $Demi-Font, Avenir, Helvetica, sans-serif;
+    font-weight: 500;
 }
 
 h4 {
     // Subheader
-    font-family: $Demi-Font;
+    font-family: $Demi-Font, Avenir, Helvetica, sans-serif;
+    font-weight: 500;
 }
 
 p {
     // Body Copy and Footer Copy
-    font-family: $Regular-Font;
+    font-family: $Regular-Font, Avenir, Helvetica, sans-serif;
+    font-weight: normal;
 }
 
 .bodyDiv {
