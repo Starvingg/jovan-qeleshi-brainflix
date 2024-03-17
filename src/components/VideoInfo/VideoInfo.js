@@ -1,4 +1,4 @@
-import "./videoInfo.scss";
+import "./VideoInfo.scss";
 import viewIcon from "../../assets/Icons/views.svg"
 import heartIcon from "../../assets/Icons/likes.svg"
 

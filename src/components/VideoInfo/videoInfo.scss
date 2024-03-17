@@ -10,10 +10,13 @@
 
     &-infoContainer {
 
+        padding-left: 0rem;
+        padding-right: 0rem;
 
-        
-        padding-left: 2rem;
-        padding-right: 2rem;
+        @media (min-width: 768px) {
+            padding-left: 2rem;
+            padding-right: 2rem;
+        }
 
         &-title {
             border-bottom: 1px solid $Mercury;
