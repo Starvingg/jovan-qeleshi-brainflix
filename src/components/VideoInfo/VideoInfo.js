@@ -1,4 +1,4 @@
-import "./VideoPlayer.scss";
+import "./VideoInfo.scss";
 import viewIcon from "../../assets/Icons/views.svg"
 import heartIcon from "../../assets/Icons/likes.svg"
 
@@ -21,11 +21,9 @@ function VideoInfo({ video }) {
                     <div className="videoComponent-infoContainer-title">
                         <h1>{video.title}</h1>
                     </div>
-
                     <div className="videoComponent-infoContainer-details">
-
                         <div className="videoComponent-infoContainer-details-author">
-                            <h3>{video.channel}</h3>
+                            <h2>{video.channel}</h2>
                             <p>{formattedDate}</p>
                         </div>
                         <div className="videoComponent-infoContainer-details-viewsLikes">

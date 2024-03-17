@@ -1,7 +1,10 @@
 @use "../../app.scss" as *;
+@use "../../styles/partials/variables.scss" as *;
+
+
 
 .headerText {
-    color: $Mercury;
+    color: #afafaf;
 }
 
 .nextVideo {

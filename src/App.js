@@ -4,11 +4,11 @@ import React, { useState } from 'react';
 import CreateComment from './components/Comments/CreateComment/CreateComment';
 import DisplayComments from './components/Comments/DisplayComment/DisplayComment';
 import NavBar from './components/NavBar/NavBar';
-import RecommendedVideos from './components/Recommended-Videos/RecommendedVideos';
+import RecommendedVideos from './components/RecommendedVideos/RecommendedVideos';
 import VideoPlayer from './components/VideoPlayer/VideoPlayer';
 
 import videoData from "./data/video-details.json"
-import VideoInfo from './components/VideoPlayer/VideoInfo';
+import VideoInfo from './components/VideoInfo/VideoInfo';
 
 function App() {
 
@@ -19,7 +19,6 @@ function App() {
       <NavBar />
       <VideoPlayer video={selectedVideo} />
       <div className='pageHandler'>
-
         
         <div className='pageHandler-videoInfoComments'>
         <VideoInfo video={selectedVideo} />
@@ -30,8 +29,6 @@ function App() {
         <div className='pageHandler-nextVideo'>
           <RecommendedVideos nextVideo={videoData} onVideoSelect={setSelectedVideo} selectedVideo={selectedVideo} />
         </div>
-
-
       </div>
     </>
   );
