@@ -10,6 +10,8 @@ import VideoPlayer from './components/VideoPlayer/VideoPlayer';
 import videoData from "./data/video-details.json"
 import VideoInfo from './components/VideoInfo/VideoInfo';
 
+import HomePage from './pages/HomePage/HomePage';
+
 import { Route, Routes } from 'react-router-dom';
 
 function App() {
@@ -19,20 +21,12 @@ function App() {
   return (
     <>
       <NavBar />
-      
-      <VideoPlayer video={selectedVideo} />
-      <div className='pageHandler'>
-        <div className='pageHandler-videoInfoComments'>
-        <VideoInfo video={selectedVideo} />
-          <h4>{selectedVideo.comments.length} Comments</h4>
-          <DisplayComments commentsData={selectedVideo} />
-        </div>
-        <div className='pageHandler-nextVideo'>
-          <RecommendedVideos nextVideo={videoData} onVideoSelect={setSelectedVideo} selectedVideo={selectedVideo} />
-        </div>
 
-        
-      </div>
+      <Routes>
+        <Route path='/' element={<HomePage />}/> 
+      </Routes>
+
+
     </>
   );
 }

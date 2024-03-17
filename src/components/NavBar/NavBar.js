@@ -1,15 +1,18 @@
 import './NavBar.scss';
 import logo from '../../assets/images/BrainFlix-logo.svg'
 import uploadSVG from '../../assets/Icons/upload.svg'
-
 import profileImage from "../../assets/images/Mohan-muruge.jpg"
+
+import { Link } from 'react-router-dom';
 
 function NavBar() {
     return (
         <>
             <header>
                 <div className='headerParent'>
-                    <img src={logo} />
+                    <Link to="/">
+                        <img src={logo} />
+                    </Link>
                     <div className='headerParent-searchBar'>
                         <form onSubmit={() => { }}>
                             <input type='text' placeholder='Search' />
@@ -25,7 +28,7 @@ function NavBar() {
 
                     <div className='headerParent-uploadButton'>
                         <button>
-                            <img src={uploadSVG} alt='Upload Button'/>
+                            <img src={uploadSVG} alt='Upload Button' />
                             UPLOAD</button>
                     </div>
 
@@ -41,9 +44,9 @@ function NavBar() {
                         </form>
 
                         <div className='headerParentTablet-searchButtonImage-button'>
-                        <button>
-                            <img src={uploadSVG} alt='Upload Button'/>
-                            UPLOAD</button>
+                            <button>
+                                <img src={uploadSVG} alt='Upload Button' />
+                                UPLOAD</button>
                         </div>
 
                         <div className='headerParentTablet-searchButtonImage-image'>
