@@ -17,7 +17,6 @@ function HomePage() {
     const { videoId } = useParams();
     const [selectedVideo, setSelectedVideo] = useState(null);
     const [isLoading, setIsLoading] = useState(true);
-
     const [videos, setVideos] = useState([]);
 
     useEffect(() => {
@@ -47,6 +46,7 @@ function HomePage() {
 
     return (
         <>
+        <main>
             <VideoPlayer video={selectedVideo} />
             <div className='pageHandler'>
                 <div className='pageHandler-videoInfoComments'>
@@ -58,6 +58,7 @@ function HomePage() {
                     <RecommendedVideos nextVideo={videos} onVideoSelect={setSelectedVideo} selectedVideo={selectedVideo} />
                 </div>
             </div>
+            </main>
         </>
     )
 

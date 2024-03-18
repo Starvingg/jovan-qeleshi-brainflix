@@ -26,11 +26,11 @@ function NavBar() {
                         <img src={profileImage} />
                     </div>
 
-                    <div className='headerParent-uploadButton'>
+                    <Link to="upload" className='headerParent-uploadButton'>
                         <button>
                             <img src={uploadSVG} alt='Upload Button' />
                             UPLOAD</button>
-                    </div>
+                    </Link>
 
                 </div>
 
