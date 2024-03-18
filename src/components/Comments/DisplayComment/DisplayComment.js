@@ -17,8 +17,7 @@ function DisplayComments({ commentsData }) {
     return (
         <>
             <CreateComment />
-
-            {comments.map(comment => (
+            {comments?.map(comment => (
             <div className="comment" key={comment.id}>
                 <div className="comment-image">
                     <div>

@@ -1,4 +1,6 @@
 @use "../../../app.scss" as *;
+@use "../../../styles/partials/variables.scss" as *;
+
 
 .comment{
     
@@ -22,7 +24,6 @@
     }
 
     &-information{
-        
         &-nameDate {
             display: flex;
             flex-direction: row;
