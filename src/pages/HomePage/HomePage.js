@@ -8,9 +8,7 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 
-const apiURL = 'https://unit-3-project-api-0a5620414506.herokuapp.com/videos';
-const apiKEY = '?api_key=77e0d206-dee2-4ac6-a718-50ed76a85a99';
-
+const apiURL = 'http://localhost:8080/videos';
 
 function HomePage() {
 
@@ -22,12 +20,12 @@ function HomePage() {
     useEffect(() => {
         const getVideosAPI = async () => {
             try {
-                const response = await axios.get(`${apiURL}${apiKEY}`);
+                const response = await axios.get(`${apiURL}`);
                 setVideos(response.data);
 
-                let selectedVideoId = videoId || response.data[0].id;
 
-                const selectedVideoResponse = await axios.get(`${apiURL}/${selectedVideoId}/${apiKEY}`);
+                let selectedVideoId = videoId || response.data[0].id;
+                const selectedVideoResponse = await axios.get(`${apiURL}/${selectedVideoId}`);
                 setSelectedVideo(selectedVideoResponse.data);
 
                 setIsLoading(false);

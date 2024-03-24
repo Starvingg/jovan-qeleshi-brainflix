@@ -55,7 +55,7 @@ p {
     &-videoInfoComments {
         margin-right: 0rem;
         padding-right: 1rem;
-        padding: 0rem 2rem;
+        padding: 0rem 1rem;
 
         @media (min-width: 768px) {
             margin-right: 2rem;
@@ -70,7 +70,7 @@ p {
 
     &-nextVideo {
         @media (max-width: 1280px) {
-            padding: 0rem 2rem;
+            padding: 0rem 1rem;
         }
     }
 
