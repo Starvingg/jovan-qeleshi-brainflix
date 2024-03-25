@@ -1,9 +1,11 @@
 import "./RecommendedVideos.scss"
 import { Link } from "react-router-dom";
 
+let videoURL = 'http://localhost:8080/'
+
 function RecommendedVideos({ nextVideo, onVideoSelect, selectedVideo }) {
     const filteredVideos = nextVideo.filter(video => video.id !== selectedVideo.id);
-    
+
     return (
         <>
             <h4 className="headerText" >NEXT VIDEOS</h4>
@@ -11,7 +13,7 @@ function RecommendedVideos({ nextVideo, onVideoSelect, selectedVideo }) {
             {filteredVideos?.map(video => (
                 <div className="nextVideo" key={video.id} onClick={() => onVideoSelect(video)}>
                     <Link to={`/video/${video.id}`} > <div className="nextVideo-img">
-                        <img src={video.image} alt={video.title} />
+                        <img src={`${videoURL}${video.image}`} alt={video.title} />
                     </div> </Link>
 
                     <div className="nextVideo-text">
@@ -25,3 +27,5 @@ function RecommendedVideos({ nextVideo, onVideoSelect, selectedVideo }) {
 }
 
 export default RecommendedVideos;
+
+

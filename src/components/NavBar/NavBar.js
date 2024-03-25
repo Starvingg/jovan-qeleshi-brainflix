@@ -3,12 +3,13 @@ import logo from '../../assets/images/BrainFlix-logo.svg'
 import uploadSVG from '../../assets/Icons/upload.svg'
 import profileImage from "../../assets/images/Mohan-muruge.jpg"
 
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 function NavBar() {
     return (
         <>
             <header>
+
                 <div className='headerParent'>
                     <Link to="/">
                         <img src={logo} />
@@ -26,7 +27,7 @@ function NavBar() {
                         <img src={profileImage} />
                     </div>
 
-                    <Link to="upload" className='headerParent-uploadButton'>
+                    <Link to="/upload" className='headerParent-uploadButton'>
                         <button>
                             <img src={uploadSVG} alt='Upload Button' />
                             UPLOAD</button>
@@ -35,7 +36,10 @@ function NavBar() {
                 </div>
 
                 <div className='headerParentTablet'>
-                    <img src={logo} />
+
+                    <Link to="/">
+                        <img src={logo} />
+                    </Link>
 
                     <div className='headerParentTablet-searchButtonImage'>
 
@@ -43,11 +47,11 @@ function NavBar() {
                             <input type='text' placeholder='Search'></input>
                         </form>
 
-                        <div className='headerParentTablet-searchButtonImage-button'>
+                        <Link to="/upload" className='headerParentTablet-searchButtonImage-button'>
                             <button>
                                 <img src={uploadSVG} alt='Upload Button' />
                                 UPLOAD</button>
-                        </div>
+                        </Link>
 
                         <div className='headerParentTablet-searchButtonImage-image'>
                             <img src={profileImage} />
